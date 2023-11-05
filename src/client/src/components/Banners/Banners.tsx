@@ -9,9 +9,11 @@ export class Banners extends Component {
     return bannersList.map((banner: BannerProps): JSX.Element => {
       return (
         <Banner
-          key={banner.mainText}
-          mainText={banner.mainText}
+          key={banner.headerText}
+          headerText={banner.headerText}
+          subText={banner.subText ? banner.subText : undefined}
           img={banner.img}
+          path={banner.path}
         />
       );
     });

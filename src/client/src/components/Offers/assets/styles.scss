@@ -1,0 +1,61 @@
+@import '../../assets/variables.scss';
+
+.offers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .offers-list {
+    width: 100%;
+    max-width: $max-width;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 300px);
+    gap: 20px;
+
+    .offer {
+      border: 1px solid $light-grey;
+      border-radius: 7px;
+      padding: $spacing-md;
+      text-decoration: none;
+      color: $dark-brown;
+
+      .offer-img {
+        height: 160px;
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 7px;
+      }
+
+      .offer-header {
+        margin: $spacing-md 0;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .offer-category {
+        margin: $spacing-md 0;
+      }
+
+      .offer-price {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        align-items: center;
+
+        .discounted {
+          color: $red;
+          font-weight: bold;
+          font-size: 22px;
+        }
+
+        .original {
+          font-weight: bold;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../assets/variables.scss';
+
+.banners {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .banner-list {
+    width: 100%;
+    max-width: $max-width;
+    display: grid;
+    grid-template-areas:
+      'bannerOne bannerTwo'
+      'bannerOne bannerThree';
+    gap: $spacing-lg;
+    grid-template-columns: 55% 1fr;
+    height: fit-content;
+
+    .banner {
+      border-radius: 10px;
+      box-sizing: border-box;
+      color: $white;
+      padding: 50px;
+      background-size: cover;
+      background-position: bottom;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+
+      .banner-header {
+        font-size: 45px;
+        font-weight: bold;
+        text-shadow: 3px 4px 7px $dark-grey;
+        padding: $spacing-xl 0 0 0;
+      }
+
+      .banner-subtext {
+        padding: $spacing-lg 0 0 0;
+        text-shadow: 3px 4px 7px $dark-grey;
+        font-size: 25px;
+      }
+
+      .banner-link {
+        font-size: 20px;
+        text-decoration: none;
+        background-color: $orange;
+        color: $white;
+        padding: $spacing-md $spacing-xl;
+        border-radius: 20px;
+        width: fit-content;
+        margin-top: $spacing-lg;
+
+        &:hover {
+          background-color: $orange-two;
+        }
+      }
+
+      &:not(:nth-child(1)) {
+        .banner-header {
+          font-size: 36px;
+        }
+      }
+
+      &:nth-of-type(1) {
+        grid-area: bannerOne;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: bannerTwo;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: bannerThree;
+      }
+    }
+  }
+}

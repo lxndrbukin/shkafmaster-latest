@@ -1,5 +1,6 @@
 export type BannerProps = {
-  mainText: string;
+  headerText: string;
   subText?: string;
   img: string;
+  path: string;
 };
